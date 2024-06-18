@@ -1,0 +1,5 @@
+Now you can go ahead and fill the env file variables as you like.
+
+Remember:
+- DB variables between env files must be the same.
+- GENERAL_AUTH_TOKEN from api .env must be the same as VITE_AUTH_TOKEN from client .env

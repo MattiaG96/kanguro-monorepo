@@ -1,0 +1,23 @@
+{
+  "name": "kanguro-monorepo",
+  "version": "1.0.0",
+  "author": "Mattia Garreffa",
+  "private": true,
+  "devDependencies": {
+    "turbo": "^2.0.3"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "docker:start": "docker compose up -d",
+    "docker:stop": "docker compose down",
+    "start:dev": "turbo run start:dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "start:prod": "dotenv -e ./apps/api/.env node apps/api/dist/src/main",
+    "test": "turbo run test"
+  },
+  "packageManager": "yarn@1.22.19"
+}
